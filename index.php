@@ -60,12 +60,36 @@ function retorna($c){
 echo retorna($c);
 
 //questao 7
-$senha1 = "Andre";
-function senha(){
-    if(ctype_upper("Andre")ctype_lower("Andre")ctype_digit("Andre")){
-        echo "true";
-    }
+$string = 'Hellow';
+if (ctype_upper($string)) {
+    echo "A string contém apenas letras maiúsculas.";
+} else {
+    echo "A string não contém apenas letras maiúsculas.";
 }
+echo "<br>";
+echo "<br>";
+//questao 8
+$idadeM = 18;
+$idademaior = ($idadeM < 18) ?  "menor de idade" : "maior de idade";
+echo $idademaior;
 
-   
+//questao 9
+$alunos = array(
+    'Junior' => 7.5,
+    'Maria' => 10,
+    'Paulo' => 6,
+    'Ana' => 8.6,
+    'Pedro' => 5.5,
+    'Julia' => 6.5
+);
+echo "<br>";
+echo "<br>";
+foreach($alunos as $aluno => $nota):
+    if($nota >= 7){
+        echo "Aprovado: $aluno - Nota: $nota <br>";
+    } else {
+        echo "Reprovado: $aluno - Nota: $nota <br>";
+    }
+endforeach;
+
 
